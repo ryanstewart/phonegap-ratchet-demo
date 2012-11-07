@@ -9,6 +9,6 @@ In order to get Ratchet to work with PhoneGap I had to make a small change to `r
 
 with
 
-`if (xhr.readyState == 4) xhr.status == 200 || xhr.status == 0 ? success(xhr, options) : failure(options.url);`
+`      if (xhr.readyState == 4) xhr.status == 200 || (xhr.status == 0 && options.url.indexOf('file:///') != -1) ? success(xhr, options) : failure(options.url);`
 
-By also allowing for an XMLHttpRequest status of 0, PhoneGap can work with push.js that Ratchet uses.
+By also allowing for an XMLHttpRequest status of 0 when we're working with the filesystem, PhoneGap can work with push.js that Ratchet uses. (Thanks to [@macdonst](https://twitter.com/macdonst) for the tip).

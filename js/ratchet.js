@@ -6,8 +6,6 @@
  * ==================================
  */
 
-//function startRatchet() {
-
 /* ----------------------------------
  * POPOVER v1.0.0
  * Licensed under The MIT License
@@ -272,7 +270,6 @@
     xhr.setRequestHeader('X-PUSH', 'true');
 
     xhr.onreadystatechange = function () {
-      console.log('onreadystatechange called: ' + xhr.readyState + ' status: ' + xhr.status);
 	  if (options._timeout) clearTimeout(options._timeout);
       if (xhr.readyState == 4) xhr.status == 200 || xhr.status == 0 ? success(xhr, options) : failure(options.url);
     };

@@ -16,8 +16,6 @@
     <author href="http://blog.digitalbackcountry.com" email="ryan@adobe.com">
 		Ryan Stewart
     </author>
-
-	<access origin="*" />
 			
 	<icon src="touch-icons/apple-touch-icon-57x57.png" width="57" height="57" />
 	<icon src="touch-icons/apple-touch-icon-72x72.png" gap:platform="ios" width="72" height="72" />
